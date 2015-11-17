@@ -30,8 +30,8 @@ def convert_bam_files(bam_file, genome_size_file):
         out_cov = bam_file.rsplit(".", 1)[0] + ".cov"
         out_bw = bam_file.rsplit(".", 1)[0] + ".bw"
 
-        if not os.path.exists(possible_bai):
-            generate_index(bam_file)
+        #if not os.path.exists(possible_bai):
+        #    generate_index(bam_file)
 
         genome_coverage_cmd = "genomeCoverageBed -ibam {} -bg -split -g {} > {}".format(bam_file,
 
